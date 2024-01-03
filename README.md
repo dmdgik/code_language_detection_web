@@ -19,3 +19,5 @@ docker, docker-compose
 ```console
 docker-compose up --build -d
 ```
+
+### Write to me if you want me to send you a link with the running application on AWS
