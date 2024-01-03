@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+</head>
+
+<body>
+    <div id="title">
+        <h1> Check code language </h1>
+    </div>
+
+    <form method="POST" action="">
+        {{ form.csrf_token }}
+        <div id="form_name">
+            {{ form.body.label }} 
+        </div>
+        <div id="form_body">
+            {{ form.body(cols="60", rows="20") }}
+        </div>
+        <div id="form_submit">
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+
+    <div class="model_result">
+        <h3>Predicted class number: {{ model_result_num }} </h3>
+    </div>
+    <div class="model_result">
+        <h3>Predicted language: {{ model_result_str }} </h3>
+    </div>
+    <div class="model_result">
+        <h3>Execution time : {{ model_execution_time }} ms</h3>
+    </div>
+    <div class="table_languages">
+        <table>
+            <thead>
+              <tr>
+                <th>language</th>
+                <th>class_number</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for language, class_number in languages_list_map.items() %}
+             <tr>
+                 <td> {{ language }} </td>
+                 <td> {{ class_number }} </td>
+             </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>  
+</body>

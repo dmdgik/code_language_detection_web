@@ -1,0 +1,6 @@
+s3_bucket_name: dmdgik-ml
+s3_model_file: code-language-detector-project/lstm-model/checkpoint_lstm_model_training_initial_torchscripted.pt
+local_model_file: ./models/checkpoint_lstm_model_training_initial_torchscripted.pt
+tokenizer: microsoft/codebert-base
+tokenizer_path: ./models/codebert_tokenizer
+LANGUAGES_LIST_MAP_PATH: ./static/languages_list_map.pkl

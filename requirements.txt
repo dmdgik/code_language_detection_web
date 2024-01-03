@@ -1,0 +1,9 @@
+flask
+gunicorn
+flask_wtf
+pyyaml
+loguru
+numpy
+torch
+transformers
+boto3

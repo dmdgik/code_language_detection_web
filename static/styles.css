@@ -1,0 +1,36 @@
+#title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#form_title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#form_body {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#form_submit {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#table_languages {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(235, 171, 142);
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}

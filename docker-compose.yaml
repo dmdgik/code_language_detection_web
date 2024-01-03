@@ -1,0 +1,27 @@
+version: '3'
+services:
+  flask:
+    build: .
+    command: 
+      - /bin/bash
+      - -c
+      - |
+        python load_model.py
+        gunicorn -w 2 -b 0.0.0.0:5000 app:app --reload
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 0.7G
+    environment:
+      - FLASK_APP=app.py
+      - PYTHONUNBUFFERED=True
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/root
